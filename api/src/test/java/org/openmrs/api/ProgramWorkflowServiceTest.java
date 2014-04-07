@@ -418,6 +418,9 @@ public class ProgramWorkflowServiceTest extends BaseContextSensitiveTest {
 		assertNotNull(p);
 	}
 	
+	/**
+	 * Tests if the program exists by getting the name and asserting if it is null
+	 */
 	@Test
 	@Verifies(value = "should return null when program does not exist with given name", method = "getProgramByName()")
 	public void getProgramByName_shouldReturnNullWhenNoProgramForGivenName() {
@@ -426,7 +429,7 @@ public class ProgramWorkflowServiceTest extends BaseContextSensitiveTest {
 	}
 	
 	@Test
-	@Verifies(value = "should save the retire program with resaon", method = "retireProgram(Program program,String reason)")
+	@Verifies(value = "should save the retire program with reason", method = "retireProgram(Program program,String reason)")
 	public void retireProgram_shouldSaveTheRetiredProgramWithReason() throws APIException {
 		String reason = "Feeling well.";
 		
